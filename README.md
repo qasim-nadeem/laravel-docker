@@ -2,7 +2,7 @@
 
 laravel-docker allows you to setup and configure fresh laravel projects with Docker. It will be up and running on your development machine with any OS (Windows, Mac, Linux), that has docker installed on it with few easy to write commands.
 
-**This Docker installation setup following:** 
+**This Docker installation setups following:** 
 
 Laravel 12
 PHP 8.2
@@ -20,7 +20,21 @@ Mysql DB version 8
 
 ---
 
+**Connecting with your db from host machine:**
+it is essential for the development to be able to access the database using your Database GUI tools like Mysql workbench or DBeaver, you can use following to make the connection:
+
+    Hostname: 127.0.0.1
+    Port: 3307
+    Username: root
+    Password: root 
+
+once the connection is made you can easily navigate the database using your GUI tools.
+
+
+---
+
 **Note:** >  make sure to include following Database configurations for Mysql in your .env file:
+
     DB_CONNECTION=mysql
     DB_HOST=mysql-db
     DB_PORT=3306
