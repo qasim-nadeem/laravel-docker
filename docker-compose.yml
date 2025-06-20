@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: laravel-app
-    container_name: laravel-app
+    #container_name: laravel-app
     restart: unless-stopped
     working_dir: /var/www
     volumes:
@@ -17,7 +17,7 @@ services:
       - laravel
   web-server:
     image: nginx:stable-alpine
-    container_name: laravel-web-server
+    #container_name: laravel-web-server
     restart: unless-stopped
     ports:
       - "80:80"
@@ -30,7 +30,7 @@ services:
       - laravel
   mysql-db:
     image: mysql:8.0
-    container_name: laravel-mysql-db
+    #container_name: laravel-mysql-db
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: root
